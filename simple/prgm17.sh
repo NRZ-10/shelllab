@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "Enter first number:"
+read a
+
+echo "Enter second number:"
+read b
+
+echo "Enter third number:"
+read c
+
+if [ $a -gt $b ] && [ $a -gt $c ]
+then
+    echo "A is greatest"
+elif [ $b -gt $a ] && [ $b -gt $c ]
+then
+    echo "B is greatest"
+else
+    echo "C is greatest"
+fi
