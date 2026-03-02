@@ -3,6 +3,12 @@
 while true; do
   echo -e "\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Exit"
   read -p "Choose an option: " choice
+
+  if [ "$choice" -eq 5 ]; then
+      echo "Exiting..."
+      break
+  fi
+
   read -p "Enter two numbers: " a b
 
   case $choice in
@@ -14,7 +20,6 @@ while true; do
        else
          echo "Cannot divide by zero"
        fi;;
-    5) echo "Exiting..."; break;;
     *) echo "Invalid choice";;
   esac
 done
